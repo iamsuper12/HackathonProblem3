@@ -1,0 +1,127 @@
+# HackathonProblem3
+
+print("How much money are you willing to spend on investing( amount will be in dollars usd")
+in_inv= int(input())
+print("How much money are you expecting to make")
+moneytobemade = int(input())
+#price of stocks day it was bought 
+#December 1st 2022 (eg)
+Sname=['AAPL','MSFT','AMZN','UNH','XOM','JNJ','JPM','WMT','PG','NVDA']
+Sprice=[5,10,30,5,10,5,10,5,15,5]
+S_Quantity=[0,0,0,0,0,0,0,0,0,0]
+Sprice_New=[]
+Stock_Names=['Apple','Microsoft','Amazon','UnitedHealthcare Co.','Exxon Mobil Corp.','Johnson & Johnson','JPMorgan & Chase Co.','Walmart','Proctor & Gamble Co.','Nvidia']
+
+print("Price of stock as of today(December 28th)")
+for i in Stock_Names:
+  print("What is the price of " + i + " stock.")
+  Sprice_New.append(int(input()))
+
+print("What is your timeline to make money. Is it 1yr, 2 yrs or 5yrs.Choose one")
+timeline = int(input())
+print(timeline)
+print("How much risk are you willing to take? please enter Low, medium or high")
+risk = input()
+print (risk)
+def buyStocks(Sprice):
+  if timeline == 1 and risk=='high':
+    print("I am in")
+    S_Quantity[Sname.index('AMZN')] += 0.6*(in_inv)/Sprice[Sname.index('AMZN')]
+    S_Quantity[Sname.index('MSFT')] +=0.3*(in_inv)/Sprice[Sname.index('MSFT')]
+    S_Quantity[Sname.index('UNH')] +=0.1*(in_inv)/Sprice[Sname.index('UNH')]
+    print("Congratulations your stock portfolio!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    print("You have",S_Quantity[Sname.index('AMZN')],"stocks in Amazon")
+    print("You have",S_Quantity[Sname.index('MSFT')],"stocks in Microsoft")
+    print("You have",S_Quantity[Sname.index('UNH')],"stocks in UNITEDHEALTH GROUP INC")
+  
+    
+    
+  if (timeline) == 1 and (risk) == 'medium':
+    S_Quantity[Sname.index('AAPL')] += 0.5*(in_inv)/Sprice[Sname.index('AAPL')]
+    S_Quantity[Sname.index('NVDA')] +=0.2*(in_inv)/Sprice[Sname.index('NVDA')]
+    S_Quantity[Sname.index('XOM')] +=0.2*(in_inv)/Sprice[Sname.index('XOM')]
+    S_Quantity[Sname.index('WMT')] +=0.1*(in_inv)/Sprice[Sname.index('WMT')]
+    print("Congratulations you have made a stock portfolio!1121")
+    print("You have",S_Quantity[Sname.index('AAPL')],"stocks in Apple")
+    print("You have",S_Quantity[Sname.index('NVDA')],"stocks in Nvidia")
+    print("You have",S_Quantity[Sname.index('XOM')],"stocks in Exxon Mobil Corp.")
+    print("You have",S_Quantity[Sname.index('WMT')],"stocks in Walmart")
+  if(timeline) == 1 and  (risk) == 'low':
+    S_Quantity[Sname.index('JNJ')] +=0.5*(in_inv)/Sprice[Sname.index('JNJ')]
+    S_Quantity[Sname.index('JPM')] +=0.2*(in_inv)/Sprice[Sname.index('JPM')]
+    S_Quantity[Sname.index('PG')] +=0.3*(in_inv)/Sprice[Sname.index('PG')]
+    print("Congratulations you have made a stock portfolio!")
+    print("You have",S_Quantity[Sname.index('JNJ')] ,"stocks in Johnson & Johnson")
+    print("You have",S_Quantity[Sname.index('JPM')] ,"stocks in JPMorgan Chase & Co")
+    print("You have",S_Quantity[Sname.index('PG')] ,"stocks in Procter & Gamble Co")
+  #If timeline is 2yrs 
+  if (timeline) == 2 and (risk) == 'high':
+    S_Quantity[Sname.index('AMZN')] += 0.5*(in_inv)/Sprice[Sname.index('AMZN')]
+    S_Quantity[Sname.index('MSFT')] +=0.3*(in_inv)/Sprice[Sname.index('MSFT')]
+    S_Quantity[Sname.index('UNH')] +=0.2*(in_inv)/Sprice[Sname.index('UNH')]
+    print("Congratulations you have made your stock portfolio!")
+    print("You have",S_Quantity[Sname.index('AMZN')],"stocks in Amazon")
+    print("You have",S_Quantity[Sname.index('MSFT')],"stocks in Mircrosoft")
+    print("You have",S_Quantity[Sname.index('UNH')],"stocks in UNITEDHEALTH GROUP INC")
+    
+  if (timeline) == 2 and (risk) == 'medium':
+    S_Quantity[Sname.index('AAPL')] += 0.4*(in_inv)/Sprice[Sname.index('AAPL')]
+    S_Quantity[Sname.index('NVDA')] +=0.1*(in_inv)/Sprice[Sname.index('NVDA')]
+    S_Quantity[Sname.index('XOM')] +=0.2*(in_inv)/Sprice[Sname.index('XOM')]
+    S_Quantity[Sname.index('WMT')] +=0.2*(in_inv)/Sprice[Sname.index('WMT')]
+    print("Congratulations you have made a stock portfolio!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀")
+    print("You have",S_Quantity[Sname.index('AAPL')],"stocks in Apple")
+    print("You have",S_Quantity[Sname.index('NVDA')] ,"stocks in Nvidia")
+    print("You have",S_Quantity[Sname.index('XOM')] ,"stocks in Exxon Mobil Corp.")
+    print("You have",S_Quantity[Sname.index('WMT')] ,"stocks in Walmart")
+  if (timeline) == 2 and (risk) == 'low':
+    S_Quantity[Sname.index('JNJ')] +=0.3*(in_inv)/Sprice[Sname.index('JNJ')]
+    S_Quantity[Sname.index('JPM')] +=0.4*(in_inv)/Sprice[Sname.index('JPM')]
+    S_Quantity[Sname.index('PG')] +=0.3*(in_inv)/Sprice[Sname.index('PG')]
+    print("Congratulations you have made a stock portfolio!")
+    print("You have",S_Quantity[Sname.index('JNJ')],"stocks in Johnson & Johnson")
+    print("You have",S_Quantity[Sname.index('JPM')],"stocks in JPMorgan Chase & Co")
+    print("You have",S_Quantity[Sname.index('PG')],"stocks in Procter & Gamble Co")
+  #if Timeline is 5 yrs
+  if (timeline) == 5 and (risk) == 'high':
+    S_Quantity[Sname.index('AMZN')] += 0.5*(in_inv)/Sprice[Sname.index('AMZN')]
+    S_Quantity[Sname.index('MSFT')] +=0.3*(in_inv)/Sprice[Sname.index('MSFT')]
+    S_Quantity[Sname.index('UNH')] +=0.2*(in_inv)/Sprice[Sname.index('UNH')]
+    print("Congratulations your stock portfolio!")
+    print("You have",S_Quantity[Sname.index('AMZN')],"stocks in Amazon")
+    print("You have",S_Quantity[Sname.index('MSFT')],"stocks in Mircrosoft")
+    print("You have",S_Quantity[Sname.index('UNH')],"stocks in UNITEDHEALTH GROUP INC")
+    
+  if(timeline) == 5 and  (risk) == 'medium':
+    S_Quantity[Sname.index('AAPL')] += 0.4*(in_inv)/Sprice[Sname.index('AAPL')]
+    S_Quantity[Sname.index('NVDA')] +=0.2*(in_inv)/Sprice[Sname.index('NVDA')]
+    S_Quantity[Sname.index('XOM')] +=0.2*(in_inv)/Sprice[Sname.index('XOM')]
+    S_Quantity[Sname.index('WMT')] +=0.2*(in_inv)/Sprice[Sname.index('WMT')]
+    print("Congratulations you have made a stock portfolio!")
+    print("You have",S_Quantity[Sname.index('AAPL')],"stocks in Apple")
+    print("You have",S_Quantity[Sname.index('NVDA')],"stocks in Nvidia")
+    print("You have",S_Quantity[Sname.index('XOM')],"stocks in Exxon Mobil Corp.")
+    print("You have",S_Quantity[Sname.index('WMT')] ,"stocks in Walmart")
+  if (timeline) == 5 and (risk) == 'low':
+    S_Quantity[Sname.index('JNJ')] +=0.4*(in_inv)/Sprice[Sname.index('JNJ')]
+    S_Quantity[Sname.index('JPM')] +=0.4*(in_inv)/Sprice[Sname.index('JPM')]
+    S_Quantity[Sname.index('PG')] +=0.2*(in_inv)/Sprice[Sname.index('PG')]
+    print("Congratulations you have made a stock portfolio!")
+    print("You have",S_Quantity[Sname.index('JNJ')],"stocks in Johnson & Johnson")
+    print("You have",S_Quantity[Sname.index('JPM')],"stocks in JPMorgan Chase & Co")
+    print("You have",S_Quantity[Sname.index('PG')],"stocks in Procter & Gamble Co")
+buyStocks(Sprice)
+#Checking wether we are in profit or loss
+Sum=0
+p=Sprice_New[2]-Sprice[2]
+for i in Sname:
+  Sum+=(Sprice_New[Sname.index(i)]-Sprice[Sname.index(i)])*S_Quantity[Sname.index(i)]
+if Sum > 0:
+  print("You are in profit. The profit you made is:",Sum)
+  print("Lets sell the stocks")
+else:
+  print("You are in a loss. The loss is:",Sum)
+  print("Lets buy more stocks that are expected to grow next time.")
+  print("How much more you want to invest?")
+  in_inv=int(input())
+  buyStocks(Sprice_New)
